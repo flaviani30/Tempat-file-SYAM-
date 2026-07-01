@@ -29,3 +29,27 @@ To run the application using `uv`, simply execute the following command:
 ```bash
 uv run simplepacman.py
 ```
+
+## Running Tests
+
+Proyek ini mencakup dua jenis pengujian (Whitebox dan Blackbox).
+
+Untuk menjalankan semua tes (Whitebox & Blackbox) menggunakan `uv`, jalankan perintah berikut:
+
+```bash
+uv run --with pygame python -m unittest discover test/
+```
+
+Untuk menjalankan hanya **Blackbox Testing (Headless/CI)**, gunakan perintah:
+
+```bash
+uv run --with pygame python -m unittest test/test_blackbox_simplepacman.py
+```
+
+### Visual Blackbox Testing (Otomatis Bermain)
+
+Untuk melihat Blackbox Testing secara visual, di mana bot otomatis akan membuka jendela game dan memainkan Pacman, jalankan:
+
+```bash
+uv run --with pygame python test/test_visual_blackbox.py
+```
